@@ -143,5 +143,5 @@ function registerAutoUpdateServiceWorker(){
     }
   });
 }
-registerAutoUpdateServiceWorker();
+// No service worker registration in isolated test environment.
 init();
