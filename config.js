@@ -1,8 +1,5 @@
-// Shearin Farm Manager public Supabase config
-// This file contains only public client-side Supabase values.
-// DO NOT add the secret/service_role key here.
-
+// Isolated Shearin Farm Manager TEST database. Public browser credentials only.
 window.SFM_CONFIG = {
-  SUPABASE_URL: "https://hkgtvppxjlapiaxprtrv.supabase.co",
-  SUPABASE_PUBLISHABLE_KEY: "sb_publishable_cw6cOQkdedM9nrSO7PnULg_CDiVMAz0"
+  SUPABASE_URL: "https://oiwfqgmmrpokzuympndd.supabase.co",
+  SUPABASE_PUBLISHABLE_KEY: "sb_publishable_fflDnuVpfvnAzHraKFIWJQ_rPe0HS5h"
 };
