@@ -55,7 +55,7 @@ $("eggForm").onsubmit=async e=>{e.preventDefault();let row={entry_date:$("eggDat
 const RECIPIENTS_KEY="sfm_test_giveaway_recipients_v1";
 function recipientNames(){try{return JSON.parse(localStorage.getItem(RECIPIENTS_KEY)||"[]")}catch{return []}}
 function refreshRecipients(){const sel=$("useRecipient"),previous=sel.value;const fromData=(data.uses||[]).map(r=>String(r.purpose||"")).filter(v=>v.startsWith("Give Away: ")).map(v=>v.slice(11));const names=[...new Set([...recipientNames(),...fromData])].filter(Boolean).sort((a,b)=>a.localeCompare(b));sel.innerHTML='<option value="">Select recipient</option>'+names.map(n=>'<option value="'+escapeHtml(n)+'">'+escapeHtml(n)+'</option>').join("")+'<option value="__new__">+ Add new recipient</option>';if(names.includes(previous))sel.value=previous}
-function updateRecipientUI(){const giveaway=$("usePurpose").value==="Give Away";$("useRecipientWrap").style.display=giveaway?"": "none";$("useRecipient").required=giveaway;const isNew=giveaway&&$("useRecipient").value==="__new__";$("useNewRecipientWrap").style.display=isNew?"":"none";$("useNewRecipient").required=isNew}
+function updateRecipientUI(){const giveaway=$("usePurpose").value==="Give Away";$("useRecipientWrap").style.display=giveaway?"": "none";$("useRecipient").required=giveaway;const isNew=giveaway&&$("useRecipient").value==="__new__";$("useNewRecipientWrap").style.display=isNew?"grid":"none";$("useNewRecipient").required=isNew;if(isNew)$("useNewRecipient").focus()}
 $("usePurpose").addEventListener("change",()=>{refreshRecipients();updateRecipientUI()});
 $("useRecipient").addEventListener("change",updateRecipientUI);
 refreshRecipients();updateRecipientUI();
