@@ -8,7 +8,7 @@
 <link rel="manifest" href="manifest.webmanifest?v=22"/>
 <link rel="stylesheet" href="style.css?v=22"/>
 </head>
-<body><div style='position:sticky;top:0;z-index:99999;background:#8b1e1e;color:white;padding:12px;text-align:center;font-weight:bold'>TEST VERSION — Connected to live data. Do not save, edit, or delete records here.</div>
+<body><div style='position:sticky;top:0;z-index:99999;background:#8b1e1e;color:white;padding:12px;text-align:center;font-weight:bold'>TEST VERSION — ISOLATED DATABASE. Safe to add, edit, and delete test records.</div>
 <header><div><h1>Shearin Farm Manager</h1><p>Flock records, synced.</p></div><button id="syncBtn">Sync</button></header>
 <main>
 <section id="setupPanel" class="panel">
@@ -86,6 +86,6 @@
 <footer id="status">Not connected.</footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>if(!window.supabase){document.getElementById("status").textContent="TEST DIAGNOSTIC: Supabase library failed to load from CDN."}</script>
-<script src="config.js?v=test-20261009-4"></script>
-<script src="script.js?v=test-20261009-6"></script>
+<script src="config.js?v=isolated-1"></script>
+<script src="script.js?v=isolated-1"></script>
 </body></html>
